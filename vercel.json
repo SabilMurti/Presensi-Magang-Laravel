@@ -14,7 +14,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://yourproductionurl.com",
+        "APP_URL": "https://presensi-magang-laravel-aqaz1msw9-murtixs-projects.vercel.app",
         "APP_KEY": "base64:EweOYBoOc5QwPd5DiAsONFmabeNPEWc+QZ3PjYMDRC8=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
