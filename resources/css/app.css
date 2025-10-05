@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Styling for Laravel's default pagination to look like DaisyUI */
+.pagination { /* Ini adalah kelas yang bisa Anda tambahkan ke div pembungkus $karyawan->links() */
+    display: flex;
+    justify-content: center; /* Pusatkan pagination */
+    gap: 0.25rem; /* Jarak antar tombol */
+    margin-top: 1rem;
+}
+
+.pagination nav {
+    display: flex;
+    align-items: center;
+}
+
+.pagination .relative.inline-flex {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap; /* Untuk responsivitas jika banyak halaman */
+}
+
+.pagination span,
+.pagination a {
+    @apply btn btn-sm border-none; /* Base button styling */
+}
+
+.pagination span.dark\:text-white.px-4, /* Current page default style */
+.pagination a.dark\:text-gray-300.px-4 { /* Other page default style */
+    @apply btn-ghost; /* Style tombol normal */
+}
+
+/* Style for active page */
+.pagination span[aria-current="page"] {
+    @apply btn-primary text-primary-content;
+}
+
+/* Style for disabled previous/next buttons */
+.pagination span.opacity-50 {
+    @apply btn-disabled;
+}
+
+/* Adjust margins for responsive elements if necessary */
+.pagination .sm\:hidden {
+    @apply flex justify-between flex-1;
+}
+
+.pagination .sm\:flex-1 {
+    @apply hidden sm:flex sm:items-center sm:justify-between;
+}
+
+/* Optional: Style for "Showing X to Y of Z results" text */
+.pagination .text-sm.text-gray-700 {
+    @apply text-base-content text-opacity-70;
+}
+
+/* Tambahkan di file CSS utama Anda */
+.swal2-actions button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+.swal2-actions .swal2-cancel,
+.swal2-actions .swal2-confirm {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
